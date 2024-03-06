@@ -62,7 +62,7 @@ function M.get_options(config, ngx)
     ssl_verify = config.ssl_verify,
     use_jwks = config.use_jwks,
     use_pkce = config.use_pkce == "yes",
-    use_nonce = config.use_nonce == "yes"
+    use_nonce = config.use_nonce == "yes",
     token_endpoint_auth_method = config.token_endpoint_auth_method,
     recovery_page_path = config.recovery_page_path,
     filters = parseFilters((config.filters or "") .. "," .. (config.ignore_auth_filters or "")),
