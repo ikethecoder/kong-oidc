@@ -107,7 +107,21 @@ return {
             }
           },
           {
+            use_nonce = {
+              type = "string",
+              required = true,
+              default = "no"
+            }
+          },
+          {
             use_jwks = {
+              type = "string",
+              required = true,
+              default = "no"
+            }
+          },
+          {
+            use_pkce  = {
               type = "string",
               required = true,
               default = "no"
