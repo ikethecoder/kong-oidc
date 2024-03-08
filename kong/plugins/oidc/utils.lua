@@ -182,14 +182,16 @@ function M.injectHeaders(header_names, header_claims, sources)
     for j = 1, #sources do
       local source, claim_value
       source = sources[j]
-      claim_value = source[claim]
-      -- Convert table to string if claim is a table
-      if type(claim_value) == "table" then
-        claim_value = table.concat(claim_value, ", ")
-      end
-      if (source and source[claim]) then
-        kong.service.request.set_header(header, claim_value)
-        break
+      if source then
+        claim_value = source[claim]
+        -- Convert table to string if claim is a table
+        if type(claim_value) == "table" then
+          claim_value = table.concat(claim_value, ", ")
+        end
+        if (source[claim]) then
+          kong.service.request.set_header(header, claim_value)
+          break
+        end
       end
     end
   end
