@@ -141,6 +141,47 @@ return {
             }
           },
           {
+            session_secure = {
+              type = "string",
+              required = false,
+              default = "on"
+            }
+          },
+          {
+            session_samesite = {
+              type = "string",
+              required = false
+            }
+          },
+          {
+            session_check_ssi = {
+              type = "string",
+              required = false,
+              default = "off"
+            }
+          },
+          {
+            session_check_ua = {
+              type = "string",
+              required = false,
+              default = "on"
+            }
+          },
+          {
+            session_check_addr = {
+              type = "string",
+              required = false,
+              default = "off"
+            }
+          },
+          {
+            session_check_scheme = {
+              type = "string",
+              required = false,
+              default = "on"
+            }
+          },
+          {
             recovery_page_path = {
               type = "string"
             }
