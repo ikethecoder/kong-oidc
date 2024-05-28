@@ -142,9 +142,9 @@ return {
           },
           {
             session_secure = {
-              type = "boolean",
+              type = "string",
               required = false,
-              default = true
+              default = "no"
             }
           },
           {
@@ -155,30 +155,30 @@ return {
           },
           {
             session_check_ssi = {
-              type = "boolean",
+              type = "string",
               required = false,
-              default = false
+              default = "no"
             }
           },
           {
             session_check_ua = {
-              type = "boolean",
+              type = "string",
               required = false,
-              default = true
+              default = "yes"
             }
           },
           {
             session_check_addr = {
-              type = "boolean",
+              type = "string",
               required = false,
-              default = false
+              default = "no"
             }
           },
           {
             session_check_scheme = {
-              type = "boolean",
+              type = "string",
               required = false,
-              default = true
+              default = "yes"
             }
           },
           {
